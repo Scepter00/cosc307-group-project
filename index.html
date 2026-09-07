@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aroma Roasters - Handcrafted specialty coffee, artisanal small-batch roasting, and cozy community café. Visit us for single-origin brews, rich espresso, and fresh pastries.">
+  <meta name="keywords" content="coffee shop, specialty coffee, artisanal roaster, espresso, cold brew, bakery, Aroma Roasters">
+  <title>Aroma Roasters | Artisanal Coffee & Small-Batch Roastery</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner container">
+      <!-- Brand / Logo -->
+      <a href="#home" class="brand" aria-label="Aroma Roasters Home">
+        <span class="brand-logo-icon" aria-hidden="true">
+          <!-- Artisanal Coffee Cup & Steam SVG -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="coffee-svg">
+            <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+            <line x1="6" y1="1" x2="6" y2="4"></line>
+            <line x1="10" y1="1" x2="10" y2="4"></line>
+            <line x1="14" y1="1" x2="14" y2="4"></line>
+          </svg>
+        </span>
+        <div class="brand-text">
+          <span class="brand-name">Aroma</span>
+          <span class="brand-sub">Roasters</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-desktop" aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About Us</a></li>
+          <li><a href="#menu" class="nav-link">Menu</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions: Theme Switcher & Modal CTA -->
+      <div class="header-actions">
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle" class="icon-btn theme-toggle" aria-label="Toggle light/dark theme" title="Toggle Theme">
+          <!-- Sun Icon (Dark Mode active) -->
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon Icon (Light Mode active) -->
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Reserve / Order CTA -->
+        <button class="btn btn-primary btn-sm btn-header-cta" id="btn-reserve-nav" data-modal-target="reservation">
+          Reserve Table
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-toggle" class="icon-btn hamburger-btn" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Slide-out Navigation Drawer -->
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile Navigation" hidden>
+      <ul class="mobile-nav-links">
+        <li><a href="#home" class="mobile-nav-link">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About Us</a></li>
+        <li><a href="#menu" class="mobile-nav-link">Menu & Products</a></li>
+        <li><a href="#experience" class="mobile-nav-link">Our Experience</a></li>
+        <li><a href="#testimonials" class="mobile-nav-link">Customer Reviews</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact & Hours</a></li>
+      </ul>
+      <div class="mobile-nav-actions">
+        <button class="btn btn-primary btn-block" data-modal-target="order">Order Coffee Now</button>
+        <button class="btn btn-outline btn-block" data-modal-target="reservation">Book a Table</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="hero-backdrop-glow" aria-hidden="true"></div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>Artisanal Micro-Roastery & Café</span>
+          </div>
+          <h1 class="hero-title">
+            Where Every Roast Tells a <span class="text-gradient">Rich Story</span>
+          </h1>
+          <p class="hero-description">
+            We ethically source premier single-origin beans across the globe, roasting them in daily micro-batches to extract authentic notes of floral fruit, velvety cocoa, and toasted honey.
+          </p>
+          <div class="hero-actions">
+            <a href="#menu" class="btn btn-primary btn-lg">
+              Explore Our Menu
+              <svg viewBox="0 0 20 20" fill="currentColor" class="btn-icon" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+            <button class="btn btn-outline btn-lg" data-modal-target="reservation">
+              Reserve a Table
+            </button>
+          </div>
+          
+          <!-- Key Highlights / Stats -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Direct-Trade Beans</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">16+</span>
+              <span class="stat-label">Single Origin Roasts</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">4.9★</span>
+              <span class="stat-label">Over 1,400 Reviews</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card-stack">
+            <!-- Hero Spotlight Card -->
+            <div class="hero-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80" 
+                   alt="Master barista pouring artisan latte art at Aroma Roasters" 
+                   class="hero-main-img" 
+                   loading="eager">
+              <div class="hero-floating-card top-float">
+                <div class="float-icon">☕</div>
+                <div>
+                  <div class="float-title">Batch #428</div>
+                  <div class="float-sub">Roasted Fresh Today</div>
+                </div>
+              </div>
+              <div class="hero-floating-card bottom-float">
+                <div class="float-icon">🌿</div>
+                <div>
+                  <div class="float-title">Eco Certified</div>
+                  <div class="float-sub">100% Compostable Cups</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="about-grid">
+          <!-- About Visual Collage -->
+          <div class="about-visuals">
+            <div class="about-img-container main-about-img">
+              <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80" 
+                   alt="Freshly roasted green and brown coffee beans cooling tray" 
+                   loading="lazy">
+            </div>
+            <div class="about-img-container secondary-about-img">
+              <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80" 
+                   alt="Cozy ambient coffee shop seating area with patrons" 
+                   loading="lazy">
+            </div>
+            <div class="experience-badge">
+              <span class="exp-years">12</span>
+              <span class="exp-text">Years of Craft Roasting</span>
+            </div>
+          </div>
+
+          <!-- About Narrative -->
+          <div class="about-content">
+            <div class="section-tag">Our Heritage & Craft</div>
+            <h2 class="section-title">Rooted in Passion, Brewed with Conscience</h2>
+            <p class="about-lead">
+              Founded in 2014 by lifelong coffee enthusiasts, Aroma Roasters began with a restored vintage 5kg drum roaster and an unwavering mission: make extraordinary specialty coffee accessible, unpretentious, and environmentally thoughtful.
+            </p>
+            <p class="about-body">
+              Every bean that enters our roastery is hand-selected through direct partnerships with independent family farms across Ethiopia, Colombia, Guatemala, and Sumatra. We roast on custom-tailored thermodynamic profiles that respect the natural altitude, soil, and terroir of each harvest.
+            </p>
+
+            <!-- 4 Core Pillars -->
+            <div class="pillars-grid">
+              <div class="pillar-card">
+                <div class="pillar-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="feather-icon">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                    <path d="M2 17l10 5 10-5"></path>
+                    <path d="M2 12l10 5 10-5"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="pillar-title">Direct-Trade Ethos</h4>
+                  <p class="pillar-desc">We pay 40% above fair-trade minimums directly to farming cooperatives.</p>
+                </div>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="feather-icon">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 6v6l4 2"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="pillar-title">Precision Profiling</h4>
+                  <p class="pillar-desc">Small micro-batches roasted every morning for peak aromatic freshness.</p>
+                </div>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="feather-icon">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="pillar-title">Community Haven</h4>
+                  <p class="pillar-desc">Comfortable seating, acoustic warmth, and complimentary gigabit Wi-Fi.</p>
+                </div>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="feather-icon">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="pillar-title">Zero-Waste Goal</h4>
+                  <p class="pillar-desc">Spent grounds are donated to community soil gardens; fully recycled packaging.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-action">
+              <button class="btn btn-primary" data-modal-target="order">Order From Roastery</button>
+              <a href="#contact" class="btn btn-text">Find Our Location &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services & Products (Menu) Section -->
+    <section id="menu" class="section menu-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag">Handcrafted Offerings</div>
+          <h2 class="section-title">Explore Our Roastery Menu</h2>
+          <p class="section-subtitle">
+            From signature espresso pulls to slow-drip single origins and oven-fresh artisan pastries, everything is prepared to order by our certified baristas.
+          </p>
+        </div>
+
+        <!-- Interactive Category Filter Buttons -->
+        <div class="menu-filter-container" role="tablist" aria-label="Menu Categories">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true" id="tab-all">
+            All Items
+          </button>
+          <button class="filter-btn" data-filter="espresso" role="tab" aria-selected="false" id="tab-espresso">
+            Espresso & Classics
+          </button>
+          <button class="filter-btn" data-filter="pourover" role="tab" aria-selected="false" id="tab-pourover">
+            Pour-Over & Brews
+          </button>
+          <button class="filter-btn" data-filter="cold" role="tab" aria-selected="false" id="tab-cold">
+            Cold & Specialties
+          </button>
+          <button class="filter-btn" data-filter="bakery" role="tab" aria-selected="false" id="tab-bakery">
+            Artisan Bakery
+          </button>
+        </div>
+
+        <!-- Menu Product Cards Grid -->
+        <div class="menu-grid" id="menu-grid">
+          
+          <!-- Item 1: Espresso Classico -->
+          <article class="menu-card" data-category="espresso" data-title="Velvet Reserve Espresso" data-price="4.25">
+            <div class="menu-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" 
+                   alt="Velvet Reserve Double Espresso with golden crema" 
+                   loading="lazy">
+              <span class="card-badge roast-badge">Medium-Dark Roast</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="card-header-row">
+                <h3 class="card-title">Velvet Reserve Espresso</h3>
+                <span class="card-price">$4.25</span>
+              </div>
+              <p class="card-origin">Origin: Minas Gerais, Brazil &amp; Antiquia, Colombia</p>
+              <p class="card-desc">A rich double shot featuring thick hazelnut crema, notes of dark chocolate ganache, toasted pecan, and dried plum.</p>
+              <div class="card-tags">
+                <span class="tag">Double Shot</span>
+                <span class="tag">Signature Blend</span>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-outline btn-sm btn-order-item" data-item-name="Velvet Reserve Espresso" data-item-price="4.25">
+                  Order Now
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 2: Honey Lavender Oat Latte -->
+          <article class="menu-card" data-category="espresso" data-title="Honey Lavender Oat Latte" data-price="5.75">
+            <div class="menu-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=600&q=80" 
+                   alt="Honey Lavender Oat Latte topped with micro-foam and dried lavender buds" 
+                   loading="lazy">
+              <span class="card-badge special-badge">Bestseller</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="card-header-row">
+                <h3 class="card-title">Honey Lavender Oat Latte</h3>
+                <span class="card-price">$5.75</span>
+              </div>
+              <p class="card-origin">House Blend with Wildflower Honey</p>
+              <p class="card-desc">Organic French lavender infused syrup, local raw wildflower honey, steamed velvety oat milk, and our espresso blend.</p>
+              <div class="card-tags">
+                <span class="tag">Vegan Friendly</span>
+                <span class="tag">Gluten Free</span>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-outline btn-sm btn-order-item" data-item-name="Honey Lavender Oat Latte" data-item-price="5.75">
+                  Order Now
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 3: Cortado Rustico -->
+          <article class="menu-card" data-category="espresso" data-title="Cortado Rústico" data-price="4.85">
+            <div class="menu-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=600&q=80" 
+                   alt="Cortado coffee in classic Gibraltar glass tumbler" 
+                   loading="lazy">
+              <span class="card-badge roast-badge">Dark Roast</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="card-header-row">
+                <h3 class="card-title">Cortado Rústico</h3>
+                <span class="card-price">$4.85</span>
+              </div>
+              <p class="card-origin">Origin: Huehuetenango, Guatemala</p>
+              <p class="card-desc">Equal parts rich espresso and silky textured steamed whole milk served in a classic Gibraltar tumbler. Bold and balanced.</p>
+              <div class="card-tags">
+                <span class="tag">1:1 Ratio</span>
+                <span class="tag">Barista Favorite</span>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-outline btn-sm btn-order-item" data-item-name="Cortado Rústico" data-item-price="4.85">
+                  Order Now
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 4: Ethiopian Yirgacheffe Pour-Over -->
+          <article class="menu-card" data-category="pourover" data-title="Ethiopian Yirgacheffe V60" data-price="6.25">
+            <div class="menu-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" 
+                   alt="V60 Pour over coffee dripper in action" 
+                   loading="lazy">
+              <span class="card-badge single-origin-badge">Single Origin</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="card-header-row">
+                <h3 class="card-title">Ethiopian Yirgacheffe V60</h3>
+                <span class="card-price">$6.25</span>
+              </div>
+              <p class="card-origin">Washed Process | 2,100m Altitude</p>
+              <p class="card-desc">Delicate, tea-like body with pronounced jasmine aromas, bright bergamot acidity, and notes of sweet Meyer lemon and peach.</p>
+              <div class="card-tags">
+                <span class="tag">Light Roast</span>
+                <span class="tag">Pour Over</span>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-outline btn-sm btn-order-item" data-item-name="Ethiopian Yirgacheffe V60" data-item-price="6.25">
+                  Order Now
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 5: Chemex Sumatra Mandheling -->
+          <article class="menu-card" data-category="pourover" data-title="Sumatra Mandheling Chemex" data-price="6.50">
+            <div class="menu-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80" 
+                   alt="Chemex coffee maker brew" 
+                   loading="lazy">
+              <span class="card-badge single-origin-badge">Single Origin</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="card-header-row">
+                <h3 class="card-title">Sumatra Mandheling Chemex</h3>
+                <span class="card-price">$6.50</span>
+              </div>
+              <p class="card-origin">Wet-Hulled (Giling Basah) | North Sumatra</p>
+              <p class="card-desc">Heavy velvety mouthfeel with rich cedar wood, baker's chocolate, sweet tobacco, and earthy herbal undertones.</p>
+              <div class="card-tags">
+                <span class="tag">Medium Roast</span>
+                <span class="tag">Low Acidity</span>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-outline btn-sm btn-order-item" data-item-name="Sumatra Mandheling Chemex" data-item-price="6.50">
+                  Order Now
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 6: Nitro Cascara Cold Brew -->
+          <article class="menu-card" data-category="cold" data-title="Nitro 24-Hour Cold Brew" data-price="5.50">
+            <div class="menu-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=600&q=80" 
+                   alt="Creamy Nitro cold brew cascading head in a tall glass" 
+                   loading="lazy">
+              <span class="card-badge special-badge">Draft Tap</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="card-header-row">
+                <h3 class="card-title">Nitro 24-Hour Cold Brew</h3>
+                <span class="card-price">$5.50</span>
+              </div>
+              <p class="card-origin">Steeped 24 Hours in Slow Nitrogen Infusion</p>
+              <p class="card-desc">Ultra-smooth draft cold brew poured with a velvety cascading foam head. Naturally sweet with molasses and toasted almond notes.</p>
+              <div class="card-tags">
+                <span class="tag">Served Chilled</span>
+                <span class="tag">Extra Kick</span>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-outline btn-sm btn-order-item" data-item-name="Nitro 24-Hour Cold Brew" data-item-price="5.50">
+                  Order Now
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 7: Spiced Tonic Espresso Float -->
+          <article class="menu-card" data-category="cold" data-title="Spiced Tonic Espresso" data-price="6.00">
+            <div class="menu-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?auto=format&fit=crop&w=600&q=80" 
+                   alt="Sparkling iced espresso tonic with rosemary garnish and citrus slice" 
+                   loading="lazy">
+              <span class="card-badge special-badge">House Craft</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="card-header-row">
+                <h3 class="card-title">Spiced Tonic Espresso</h3>
+                <span class="card-price">$6.00</span>
+              </div>
+              <p class="card-origin">Single Origin Kenyan Espresso</p>
+              <p class="card-desc">Artisanal botanical tonic water, freshly poured double espresso float, expressed blood orange peel, and bruised rosemary sprig.</p>
+              <div class="card-tags">
+                <span class="tag">Effervescent</span>
+                <span class="tag">Refreshing</span>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-outline btn-sm btn-order-item" data-item-name="Spiced Tonic Espresso" data-item-price="6.00">
+                  Order Now
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 8: Artisan Cardamom Knot -->
+          <article class="menu-card" data-category="bakery" data-title="Cardamom Brioche Knot" data-price="4.50">
+            <div class="menu-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" 
+                   alt="Freshly baked golden Swedish cardamom bun with pearl sugar" 
+                   loading="lazy">
+              <span class="card-badge bakery-badge">Baked Daily</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="card-header-row">
+                <h3 class="card-title">Cardamom Brioche Knot</h3>
+                <span class="card-price">$4.50</span>
+              </div>
+              <p class="card-origin">Scandinavian Heritage Recipe</p>
+              <p class="card-desc">Slow-fermented sourdough brioche braided with freshly cracked green cardamom, salted cultured butter, and Swedish pearl sugar.</p>
+              <div class="card-tags">
+                <span class="tag">Vegetarian</span>
+                <span class="tag">Warm on Request</span>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-outline btn-sm btn-order-item" data-item-name="Cardamom Brioche Knot" data-item-price="4.50">
+                  Order Now
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 9: Valrhona Dark Chocolate Croissant -->
+          <article class="menu-card" data-category="bakery" data-title="Pain au Chocolat" data-price="4.95">
+            <div class="menu-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80" 
+                   alt="Flaky golden French pain au chocolat pastry" 
+                   loading="lazy">
+              <span class="card-badge bakery-badge">Baked Daily</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="card-header-row">
+                <h3 class="card-title">Pain au Chocolat</h3>
+                <span class="card-price">$4.95</span>
+              </div>
+              <p class="card-origin">72-Layer French Lamination</p>
+              <p class="card-desc">Golden crisp exterior yielding to honeycomb crumb centered with double batons of 70% Valrhona bittersweet dark chocolate.</p>
+              <div class="card-tags">
+                <span class="tag">French Butter</span>
+                <span class="tag">Flaky &amp; Rich</span>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-outline btn-sm btn-order-item" data-item-name="Pain au Chocolat" data-item-price="4.95">
+                  Order Now
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Custom Order Banner -->
+        <div class="menu-cta-banner">
+          <div class="banner-content">
+            <h3>Looking for Whole Bean Bags or Cold Brew Kegs?</h3>
+            <p>We grind fresh to your brewing method (V60, French Press, Espresso) and ship 12oz &amp; 2lb roaster bags nationwide.</p>
+          </div>
+          <div class="banner-actions">
+            <button class="btn btn-primary" data-modal-target="order">Order Whole Beans</button>
+            <button class="btn btn-outline" data-modal-target="reservation">Book Roastery Tour</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section (Why Aroma Roasters) -->
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag">The Aroma Atmosphere</div>
+          <h2 class="section-title">More Than Just a Cup of Coffee</h2>
+          <p class="section-subtitle">
+            Designed as an urban sanctuary for creators, readers, deep thinkers, and coffee connoisseurs.
+          </p>
+        </div>
+
+        <div class="experience-cards-grid">
+          <!-- Experience Card 1 -->
+          <div class="exp-card">
+            <div class="exp-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="exp-svg">
+                <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+              </svg>
+            </div>
+            <h3 class="exp-card-title">Live Roasting Sessions</h3>
+            <p class="exp-card-desc">
+              Watch our head roaster calibrate drum temperatures and crack levels every Tuesday and Friday morning right on our open shop floor.
+            </p>
+            <span class="exp-card-highlight">Free Public Cupping @ 10 AM</span>
+          </div>
+
+          <!-- Experience Card 2 -->
+          <div class="exp-card">
+            <div class="exp-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="exp-svg">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="exp-card-title">Work &amp; Create Freely</h3>
+            <p class="exp-card-desc">
+              Equipped with silent acoustic zones, private booth nooks, ergonomic seating, dedicated USB-C power at every seat, and fiber Wi-Fi.
+            </p>
+            <span class="exp-card-highlight">Fiber 500 Mbps Up/Down</span>
+          </div>
+
+          <!-- Experience Card 3 -->
+          <div class="exp-card">
+            <div class="exp-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="exp-svg">
+                <circle cx="12" cy="8" r="7"></circle>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+              </svg>
+            </div>
+            <h3 class="exp-card-title">Barista Academy</h3>
+            <p class="exp-card-desc">
+              Weekend small-group workshops covering sensory tasting, milk steaming physics, manual pour-over variables, and home espresso dialing.
+            </p>
+            <span class="exp-card-highlight">Certifications Available</span>
+          </div>
+
+          <!-- Experience Card 4 -->
+          <div class="exp-card">
+            <div class="exp-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="exp-svg">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <h3 class="exp-card-title">Aroma Roasters Club</h3>
+            <p class="exp-card-desc">
+              Subscribe to monthly roaster boxes curated by our team. Enjoy member tastings, early reserve allocations, and 15% off all café drinks.
+            </p>
+            <span class="exp-card-highlight">Delivered Monthly</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag">Community Love</div>
+          <h2 class="section-title">What Our Guests Say</h2>
+          <p class="section-subtitle">Read unfiltered stories from our regular neighborhood coffee enthusiasts.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="stars" aria-label="5 stars out of 5">★★★★★</div>
+            <p class="quote">
+              "The Ethiopian Yirgacheffe pour-over genuinely changed how I perceive coffee. It’s light, crisp, and bursts with peach tea notes. Aroma Roasters has ruined all other coffee shops for me!"
+            </p>
+            <div class="customer-info">
+              <div class="avatar">SJ</div>
+              <div>
+                <h4 class="customer-name">Sophia Jenkins</h4>
+                <p class="customer-role">Architect &amp; Daily Regular</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card featured-testimonial">
+            <div class="stars" aria-label="5 stars out of 5">★★★★★</div>
+            <p class="quote">
+              "Their table reservation feature saved my team for our remote sprint session. Outstanding atmosphere, courteous baristas who know their bean profiles inside out, and the cardamom knots are heaven."
+            </p>
+            <div class="customer-info">
+              <div class="avatar">MD</div>
+              <div>
+                <h4 class="customer-name">Marcus Davies</h4>
+                <p class="customer-role">Product Designer, Studio K</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div class="stars" aria-label="5 stars out of 5">★★★★★</div>
+            <p class="quote">
+              "The Honey Lavender Oat Latte is perfection — not overly sweet, just aromatic and creamy. Plus, their ethical sourcing model makes supporting them an easy choice every morning."
+            </p>
+            <div class="customer-info">
+              <div class="avatar">ER</div>
+              <div>
+                <h4 class="customer-name">Elena Rostova</h4>
+                <p class="customer-role">Photographer &amp; Writer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Visit Information Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag">Visit &amp; Connect</div>
+          <h2 class="section-title">We’d Love to Welcome You</h2>
+          <p class="section-subtitle">Drop by for your morning pour or reach out for inquiries, catering, and private bookings.</p>
+        </div>
+
+        <div class="contact-layout">
+          <!-- Info Details Column -->
+          <div class="contact-info-card">
+            <h3 class="info-title">Aroma Roasters Flagship Café</h3>
+            <p class="info-text">
+              Nestled in the historic Arts &amp; Roastery district, our glasshouse space invites you to pause, sip, and recharge.
+            </p>
+
+            <ul class="contact-details-list">
+              <li class="contact-detail-item">
+                <span class="detail-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </span>
+                <div>
+                  <strong>Store Address</strong>
+                  <p>142 Artisan Boulevard, Roastery Quarter, Suite 104<br>Metro City, MC 98101</p>
+                </div>
+              </li>
+
+              <li class="contact-detail-item">
+                <span class="detail-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </span>
+                <div>
+                  <strong>Phone Contact</strong>
+                  <p><a href="tel:+15552766276" class="link-hover">+1 (555) 276-6276 (AROMA-RO)</a></p>
+                </div>
+              </li>
+
+              <li class="contact-detail-item">
+                <span class="detail-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </span>
+                <div>
+                  <strong>Direct Email</strong>
+                  <p><a href="mailto:hello@aromaroasters.com" class="link-hover">hello@aromaroasters.com</a></p>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Opening Hours Box -->
+            <div class="hours-card">
+              <h4 class="hours-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="hours-icon" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                Opening Hours
+              </h4>
+              <div class="hours-row">
+                <span>Monday – Friday</span>
+                <strong>6:30 AM – 8:00 PM</strong>
+              </div>
+              <div class="hours-row">
+                <span>Saturday</span>
+                <strong>7:00 AM – 9:00 PM</strong>
+              </div>
+              <div class="hours-row">
+                <span>Sunday</span>
+                <strong>7:30 AM – 7:00 PM</strong>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links-section">
+              <span class="social-label">Follow our Daily Roasts:</span>
+              <div class="social-icons">
+                <a href="#" class="social-btn" aria-label="Aroma Roasters on Instagram">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                </a>
+                <a href="#" class="social-btn" aria-label="Aroma Roasters on Twitter / X">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                </a>
+                <a href="#" class="social-btn" aria-label="Aroma Roasters on Facebook">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                  </svg>
+                </a>
+                <a href="#" class="social-btn" aria-label="Aroma Roasters on YouTube">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form Column -->
+          <div class="contact-form-card">
+            <h3 class="form-title">Send Us an Inquiry</h3>
+            <p class="form-sub">Have a question about whole bean wholesale, barista training, or private venue booking? Send us a note below.</p>
+            
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">Your Name <span class="required">*</span></label>
+                  <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Jordan Miller" required>
+                  <span class="form-error-msg" id="error-contact-name">Please enter your name.</span>
+                </div>
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">Email Address <span class="required">*</span></label>
+                  <input type="email" id="contact-email" name="email" class="form-input" placeholder="jordan@example.com" required>
+                  <span class="form-error-msg" id="error-contact-email">Please enter a valid email address.</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Subject</label>
+                <select id="contact-subject" name="subject" class="form-select">
+                  <option value="general">General Café Inquiry</option>
+                  <option value="catering">Event Catering &amp; Coffee Cart</option>
+                  <option value="wholesale">Wholesale Roasted Beans</option>
+                  <option value="barista">Barista Masterclasses</option>
+                  <option value="feedback">Experience Feedback</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message <span class="required">*</span></label>
+                <textarea id="contact-message" name="message" class="form-textarea" rows="4" placeholder="How can our roastery team assist you today?" required></textarea>
+                <span class="form-error-msg" id="error-contact-message">Please write a message before sending.</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="btn-submit-contact">
+                <span>Send Inquiry</span>
+                <svg viewBox="0 0 20 20" fill="currentColor" class="btn-icon" aria-hidden="true">
+                  <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Order & Reservation Modal Dialog -->
+  <div id="booking-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-headline" hidden>
+    <div class="modal-card">
+      <!-- Modal Close Button -->
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close dialog">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Modal Tabs for Order vs Table Booking -->
+      <div class="modal-tabs" role="tablist">
+        <button class="modal-tab-btn active" id="tab-modal-order" data-view="order" role="tab" aria-selected="true">
+          ☕ Quick Coffee Order
+        </button>
+        <button class="modal-tab-btn" id="tab-modal-reserve" data-view="reservation" role="tab" aria-selected="false">
+          🪑 Reserve a Table
+        </button>
+      </div>
+
+      <!-- Tab View 1: Quick Order Form -->
+      <div id="view-modal-order" class="modal-view-panel">
+        <div class="modal-header">
+          <h3 id="modal-headline" class="modal-title">Fresh Roastery Quick Order</h3>
+          <p class="modal-sub">Place your pickup order in advance. Our baristas will prepare it fresh for your arrival.</p>
+        </div>
+
+        <form id="order-form" class="modal-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="order-item-select" class="form-label">Selected Coffee / Item <span class="required">*</span></label>
+              <select id="order-item-select" name="item" class="form-select" required>
+                <option value="Velvet Reserve Espresso ($4.25)">Velvet Reserve Espresso ($4.25)</option>
+                <option value="Honey Lavender Oat Latte ($5.75)">Honey Lavender Oat Latte ($5.75)</option>
+                <option value="Cortado Rústico ($4.85)">Cortado Rústico ($4.85)</option>
+                <option value="Ethiopian Yirgacheffe V60 ($6.25)">Ethiopian Yirgacheffe V60 ($6.25)</option>
+                <option value="Sumatra Mandheling Chemex ($6.50)">Sumatra Mandheling Chemex ($6.50)</option>
+                <option value="Nitro 24-Hour Cold Brew ($5.50)">Nitro 24-Hour Cold Brew ($5.50)</option>
+                <option value="Spiced Tonic Espresso ($6.00)">Spiced Tonic Espresso ($6.00)</option>
+                <option value="Cardamom Brioche Knot ($4.50)">Cardamom Brioche Knot ($4.50)</option>
+                <option value="Pain au Chocolat ($4.95)">Pain au Chocolat ($4.95)</option>
+                <option value="12oz Roaster Bag - Whole Bean ($18.00)">12oz Roaster Bag - Whole Bean ($18.00)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="order-qty" class="form-label">Quantity</label>
+              <input type="number" id="order-qty" name="quantity" class="form-input" min="1" max="10" value="1">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="order-milk" class="form-label">Milk / Brew Preference</label>
+              <select id="order-milk" name="milkPreference" class="form-select">
+                <option value="Oat Milk (Minor Figures)">Oat Milk (Minor Figures)</option>
+                <option value="Whole Organic Dairy">Whole Organic Dairy</option>
+                <option value="Almond Milk">Almond Milk</option>
+                <option value="No Milk (Black / Pour-Over)">No Milk (Black / Pour-Over)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="order-pickup-time" class="form-label">Pickup Time</label>
+              <select id="order-pickup-time" name="pickupTime" class="form-select">
+                <option value="ASAP (10-15 mins)">ASAP (10–15 mins)</option>
+                <option value="In 30 minutes">In 30 minutes</option>
+                <option value="In 1 hour">In 1 hour</option>
+                <option value="Later today">Later today</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="order-name" class="form-label">Your Name <span class="required">*</span></label>
+              <input type="text" id="order-name" name="name" class="form-input" placeholder="e.g. Alex Rivera" required>
+              <span class="form-error-msg" id="error-order-name">Please enter your name.</span>
+            </div>
+            <div class="form-group">
+              <label for="order-phone" class="form-label">Phone for SMS Ready Alert <span class="required">*</span></label>
+              <input type="tel" id="order-phone" name="phone" class="form-input" placeholder="(555) 000-0000" required>
+              <span class="form-error-msg" id="error-order-phone">Please enter your phone number.</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="order-notes" class="form-label">Special Preparation Requests</label>
+            <input type="text" id="order-notes" name="notes" class="form-input" placeholder="e.g. Extra hot, light ice, decaf beans...">
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg" id="btn-submit-order">
+            Confirm &amp; Place Order
+          </button>
+        </form>
+      </div>
+
+      <!-- Tab View 2: Table Reservation Form -->
+      <div id="view-modal-reserve" class="modal-view-panel" hidden>
+        <div class="modal-header">
+          <h3 class="modal-title">Reserve a Café Table</h3>
+          <p class="modal-sub">Secure a comfortable nook for your study session, client meeting, or weekend brunch.</p>
+        </div>
+
+        <form id="reserve-form" class="modal-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="reserve-date" class="form-label">Date <span class="required">*</span></label>
+              <input type="date" id="reserve-date" name="date" class="form-input" required>
+              <span class="form-error-msg" id="error-reserve-date">Please pick a reservation date.</span>
+            </div>
+            <div class="form-group">
+              <label for="reserve-time" class="form-label">Preferred Time Slot <span class="required">*</span></label>
+              <select id="reserve-time" name="timeSlot" class="form-select" required>
+                <option value="08:00 AM">08:00 AM – Early Bird</option>
+                <option value="10:30 AM">10:30 AM – Morning Cupping</option>
+                <option value="01:00 PM">01:00 PM – Midday Chill</option>
+                <option value="03:30 PM">03:30 PM – Afternoon Focus</option>
+                <option value="06:00 PM">06:00 PM – Sunset Espresso</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="reserve-guests" class="form-label">Number of Guests</label>
+              <select id="reserve-guests" name="guests" class="form-select">
+                <option value="1 Person (Solo Workstation)">1 Guest (Solo Workstation)</option>
+                <option value="2 People (Cozy Table)" selected>2 Guests (Cozy Table)</option>
+                <option value="3-4 People (Booth)">3–4 Guests (Booth Nook)</option>
+                <option value="5-8 People (Community Table)">5–8 Guests (Community Table)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="reserve-seating" class="form-label">Seating Zone</label>
+              <select id="reserve-seating" name="seatingZone" class="form-select">
+                <option value="Roastery Floor (Barista View)">Roastery Floor (Barista View)</option>
+                <option value="Quiet Sunlit Garden Patio">Quiet Sunlit Garden Patio</option>
+                <option value="Acoustic Study Lounge">Acoustic Study Lounge</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="reserve-name" class="form-label">Contact Name <span class="required">*</span></label>
+              <input type="text" id="reserve-name" name="name" class="form-input" placeholder="e.g. Taylor Morgan" required>
+              <span class="form-error-msg" id="error-reserve-name">Please enter your name.</span>
+            </div>
+            <div class="form-group">
+              <label for="reserve-email" class="form-label">Confirmation Email <span class="required">*</span></label>
+              <input type="email" id="reserve-email" name="email" class="form-input" placeholder="taylor@example.com" required>
+              <span class="form-error-msg" id="error-reserve-email">Please enter a valid email.</span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg" id="btn-submit-reservation">
+            Confirm Table Reservation
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-grid">
+        <!-- Brand Info -->
+        <div class="footer-col footer-brand-col">
+          <div class="footer-brand">
+            <span class="brand-logo-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="coffee-svg">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                <line x1="6" y1="1" x2="6" y2="4"></line>
+                <line x1="10" y1="1" x2="10" y2="4"></line>
+                <line x1="14" y1="1" x2="14" y2="4"></line>
+              </svg>
+            </span>
+            <span class="footer-brand-name">Aroma Roasters</span>
+          </div>
+          <p class="footer-desc">
+            Passionate roasters dedicated to exceptional single-origin beans, craft brewing rituals, and fostering connection through the warmth of coffee.
+          </p>
+          <div class="footer-badge-pill">
+            🌱 100% Certified Carbon Neutral Café
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home Experience</a></li>
+            <li><a href="#about">Our Roastery Story</a></li>
+            <li><a href="#menu">Handcrafted Menu</a></li>
+            <li><a href="#experience">Café Sanctuary</a></li>
+            <li><a href="#testimonials">Customer Reviews</a></li>
+            <li><a href="#contact">Hours &amp; Location</a></li>
+          </ul>
+        </div>
+
+        <!-- Offerings & Services -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Specialty Services</h4>
+          <ul class="footer-links">
+            <li><a href="#menu" data-modal-target="order">Order Coffee Ahead</a></li>
+            <li><a href="#contact" data-modal-target="reservation">Reserve a Table</a></li>
+            <li><a href="#menu">Single-Origin Subscriptions</a></li>
+            <li><a href="#contact">Wholesale Bean Inquiries</a></li>
+            <li><a href="#experience">Public Weekend Cuppings</a></li>
+            <li><a href="#contact">Private Event Booking</a></li>
+          </ul>
+        </div>
+
+        <!-- Roaster Newsletter -->
+        <div class="footer-col newsletter-col">
+          <h4 class="footer-heading">The Aroma Dispatch</h4>
+          <p class="newsletter-desc">Subscribe to receive monthly roast profiles, brewing guides, and secret café discounts.</p>
+          <form id="newsletter-form" class="newsletter-form">
+            <div class="newsletter-input-group">
+              <input type="email" id="newsletter-email" class="newsletter-input" placeholder="Your email address..." required>
+              <button type="submit" class="btn btn-primary btn-sm" aria-label="Subscribe to newsletter">
+                Join
+              </button>
+            </div>
+            <span class="newsletter-note">We never spam. Unsubscribe at any time.</span>
+          </form>
+        </div>
+      </div>
+
+      <!-- Copyright & Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Aroma Roasters Specialty Coffee Co. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <span class="separator">•</span>
+          <a href="#">Terms of Service</a>
+          <span class="separator">•</span>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
